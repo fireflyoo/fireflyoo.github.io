@@ -2,10 +2,9 @@ baseURL = 'http://fireflyoo.dns.navy/'
 languageCode = 'zh-cn'
 title = '部落格'
 defaultContentLanguage = "en"
-
+enableGitInfo = true
 # Change the default theme to be use when building the site with Hugo
 theme = "LoveIt"
-
 [params]
   # LoveIt theme version
   version = "0.2.X"
