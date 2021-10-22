@@ -1,5 +1,26 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>部落格</title><link>http://fireflyoo.dns.navy/</link><description>部落格</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 13 Oct 2021 05:15:48 +0000</lastBuildDate><atom:link href="http://fireflyoo.dns.navy/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo编译小记</title><link>http://fireflyoo.dns.navy/posts/compile-hugo/</link><pubDate>Wed, 13 Oct 2021 05:15:48 +0000</pubDate><author>Author</author><guid>http://fireflyoo.dns.navy/posts/compile-hugo/</guid><description><![CDATA[准备好编译环境 我的硬件是R4S,CPU是arm64架构，系统装的是openwrt21.02 我试过Openwrt官方库里的gcc是不能编译出extended版本的Hugo的。 需要下载第三方的编译工具 我是从这里发现下载地址的。
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>部落格</title><link>http://fireflyoo.dns.navy/</link><description>部落格</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 22 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://fireflyoo.dns.navy/index.xml" rel="self" type="application/rss+xml"/><item><title>Openwrt下安装KodBox</title><link>http://fireflyoo.dns.navy/posts/kodbox/</link><pubDate>Fri, 22 Oct 2021 00:00:00 +0000</pubDate><author>Author</author><guid>http://fireflyoo.dns.navy/posts/kodbox/</guid><description>下载地址
+硬件：R4S &amp;ndash; 4GB内存,ARM64 CPU 系统：OpenWRT 21.02 Web Server：Nginx 1.19.6 后端语言：PHP 8.0.9 需要安装的依赖 用 opkg install package-name 安装； 安装前记得 opkg update 下。
+nginx-all-module php8 php8-fpm php8-mod-curl php8-mod-gd php8-mod-iconv php8-mod-mbstring php8-mod-pdo php8-mod-pdo-sqlite php8-mod-sqlite3 php8-mod-xml zoneinfo-asia unzip 安装些工具用来新增用户,因为php8-fpm不能用root执行
+opkg update opkg install shadow-groupadd opkg install shadow-useradd groupadd www-data useradd http -g www-data 编辑 /etc/php8-fpm.d/www.conf 修改下用户名 并记住里面listen的值（一般是 /var/run/php8-fpm.sock)
+user = http group = www-data 注释调/etc/php.ini里的
+;doc_root = &amp;quot;/www&amp;quot; 配置/etc/nginx
+#核心配置，其他略 location /kodbox { alias /opt/kodbox; location ~ \.</description></item><item><title>Conemu+plink打造还算完美的ssh client</title><link>http://fireflyoo.dns.navy/posts/conemu/</link><pubDate>Tue, 19 Oct 2021 00:00:00 +0000</pubDate><author>Author</author><guid>http://fireflyoo.dns.navy/posts/conemu/</guid><description>plink是什么？ plink就是一个windows上的ssh client，putty是GUI版本，plink是命令版本
+不过现在Win10上已经自带ssh了，配合Windows Terminal
+除了没有plink免输密码的-pw选项，其实也挺好用。
+下载地址 plink修改版 Conemu官网 配置 然后在Conemu里新建一个Task
+chcp 65001 &amp;amp;&amp;amp; plink username@host.name -pw password -P 22 尚未修复的BUG plink修改版修复了原版的Bug(相对于Conemu来说，在自家的Putty上是没问题的)
+还有个Bug是终端只能适配刚启动时的窗口大小，不能改。这个Bug一直没改
+Plink survives on Ctrl+C and is transmitted the keypress to server instead. Keyboard fixes. Arrows are working: Up/Down for history, Left/Right for moving in prompt. Esc keypress transmitted to server (Vim and so on). ssh terminal size is properly initialized on startup (on-the-fly resize is not supported yet).</description></item><item><title>修复Win10打不开自家应用商店的Bug</title><link>http://fireflyoo.dns.navy/posts/openms-store/</link><pubDate>Tue, 19 Oct 2021 00:00:00 +0000</pubDate><author>Author</author><guid>http://fireflyoo.dns.navy/posts/openms-store/</guid><description>网络连接正常，但是应用商店加载失败，错误代码: 0x80131500
+网上试了很多种办法都不行，包括重装应用商店。
+后来才发现不是应用商店的问题，而是http协议设置的问题。
+若有小伙伴也有类似的情况可以试试，避免采坑。
+1、用“win + R”打开运行
+2、输入 inetcpl.cpl 打开Internet属性（或从IE浏览器设置打开）
+3 点击高级选项
+4 找到并勾选 TLS 1.2，取消勾选TLS 1.0
+点击确定，现在应用商店可以打开了！</description></item><item><title>PC软件需求</title><link>http://fireflyoo.dns.navy/posts/software-needs/</link><pubDate>Sat, 16 Oct 2021 00:00:00 +0000</pubDate><author>Author</author><guid>http://fireflyoo.dns.navy/posts/software-needs/</guid><description>1. 要一个类似Windows上打印照片，能简单快速排版的的软件。 2.</description></item><item><title>hugo后台管理</title><link>http://fireflyoo.dns.navy/posts/hello-world/</link><pubDate>Fri, 15 Oct 2021 00:00:00 +0000</pubDate><author>Author</author><guid>http://fireflyoo.dns.navy/posts/hello-world/</guid><description>准备用cgi远古魔法弄一个网页端后台处理脚本 不然总是要进ssh手动执行hugo生成本地静态页面，挺麻烦的。还有要弄个一键push到github的cgi脚本。 任务列表
+1. cgi脚本，用来执行hugo，生成本地静态页面 2. cgi脚本，用来执行git push，同步源码到github 我发现lighttpd的webdav好像不支持符号链接？ 任务一基本完成，现在可以通过/hugo.cgi魔法直接发布文章，编辑文章通过webdav.</description></item><item><title>Hugo编译小记</title><link>http://fireflyoo.dns.navy/posts/compile-hugo/</link><pubDate>Wed, 13 Oct 2021 05:15:48 +0000</pubDate><author>Author</author><guid>http://fireflyoo.dns.navy/posts/compile-hugo/</guid><description><![CDATA[准备好编译环境 我的硬件是R4S,CPU是arm64架构，系统装的是openwrt21.02 我试过Openwrt官方库里的gcc是不能编译出extended版本的Hugo的。 需要下载第三方的编译工具 我是从这里发现下载地址的。
 wget https://musl.cc/aarch64-linux-musl-native.tgz tar zxvf aarch64-linux-musl-native.tgz 编辑/etc/profile或~/.profile里的PATH 弄好git和go 我怕空间不够用，全装在另外一个分区(/opt)了 所以还要编辑/etc/opkg.conf添加如下行
 dest opt /opt 然后安装
 opkg install git-http -d opt opkg install golang -d opt 装完后记得添加执行路径到profile的path里，或者添加符号链接到/usr/bin下
-静态编译 git clone https://github.com/gohugoio/hugo.git cd hugo CGO_ENABLED=1 CC=aarch64-linux-musl-gcc CXX=aarch64-linux-musl-g++ \ go install --tags extended -ldflags &#39;-s -w --extldflags &#34;-static -fpic&#34;&#39; ]]></description></item><item><title/><link>http://fireflyoo.dns.navy/posts/hello-world/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>Author</author><guid>http://fireflyoo.dns.navy/posts/hello-world/</guid><description>hello World</description></item></channel></rss>
+静态编译 git clone https://github.com/gohugoio/hugo.git cd hugo CGO_ENABLED=1 CC=aarch64-linux-musl-gcc CXX=aarch64-linux-musl-g++ \ go install --tags extended -ldflags &#39;-s -w --extldflags &#34;-static -fpic&#34;&#39; ]]></description></item></channel></rss>
