@@ -8,7 +8,11 @@ theme = "LoveIt"
 [params]
   # LoveIt theme version
   version = "0.2.X"
-
+[frontmatter]
+  date = ['date', 'publishDate', 'lastmod']
+  expiryDate = ['expiryDate']
+  lastmod = [':git', 'lastmod', 'date', 'publishDate']
+  publishDate = ['publishDate', 'date']
 [menu]
   [[menu.main]]
     identifier = "posts"
