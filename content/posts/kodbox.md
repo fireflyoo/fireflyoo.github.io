@@ -25,6 +25,7 @@ php8-mod-pdo
 php8-mod-pdo-sqlite
 php8-mod-sqlite3
 php8-mod-xml
+php8-mod-session
 zoneinfo-asia
 unzip
 ```
@@ -50,12 +51,15 @@ group = www-data
 ```
 
 配置/etc/nginx
-
+参考[kod官方文档][3]
 ```
 #核心配置，其他略
 location /kodbox {
-     alias /opt/kodbox;
-      location ~ \.php$ {
+     alias /opt/usr/share/kodbox;
+     index index.php;
+      location ~ \.php(.*)$ {
+        fastcgi_split_path_info  ^(.+\.php)(.*)$;
+        fastcgi_param  PATH_INFO $fastcgi_path_info;
         fastcgi_param SCRIPT_FILENAME $request_filename;
         fastcgi_pass unix:/var/run/php8-fpm.sock;
         include fastcgi_params;
@@ -66,3 +70,4 @@ location /kodbox {
 
 [1]:https://kodcloud.com/download/
 [2]:https://oldwiki.archive.openwrt.org/doc/howto/secure.access
+[3]:http://doc.kodcloud.com/v2/#/help/pathInfo?id=nginxapache%e6%94%af%e6%8c%81path_info%e6%a8%a1%e5%bc%8f
