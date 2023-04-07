@@ -48,4 +48,12 @@ def subsets(nums)
     }
 end
 ```
+```ruby
+# 尾递归版本
+def subsets(nums,q=[[]],sum=[[]])
+    return sum if nums==[]
+    return subsets(nums[1..],sum,sum) if q==[]
+    subsets(nums,q[1..],sum+[q[0]+[nums[0]]])
+end
+```
 
