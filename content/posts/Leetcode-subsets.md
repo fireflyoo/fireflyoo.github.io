@@ -56,4 +56,17 @@ def subsets(nums,q=[[]],sum=[[]])
     subsets(nums,q[1..],sum+[q[0]+[nums[0]]])
 end
 ```
-
+## 解法五：回溯-多叉树
+```ruby
+def subsets(nums)
+    result=[]
+    dfs=->(k,path=[]){
+        result<<path
+        k.times{|i|
+            dfs.(i,[nums[i],*path])
+        }
+    }
+    dfs.(nums.size)
+    result
+end
+```
