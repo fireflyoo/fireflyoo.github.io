@@ -38,6 +38,25 @@ def subsets(nums,path=[])
     subsets(nums[1..],[nums[0],*path])+subsets(nums[1..],path)
 end
 ```
+```ruby
+# 这样写啰嗦些，但可以节省一个返回栈..
+# 其实还可以再啰嗦些，再节省一个参数栈..可能那样写才算回溯？
+# 但写的太长就有点屎山的感觉了，还是写成上面那样的纯递归比较优雅。。
+
+def subsets(nums)
+    result=[]
+    dfs=->(k,path=[]){
+        if k==0
+            result<<path
+            return
+        end
+        dfs.(k-1,path)
+        dfs.(k-1,[nums[k-1],*path])
+    }
+    dfs.(nums.size)
+    result
+end
+```
 ## 解法四：逐个枚举法
 ```ruby
 def subsets(nums)
