@@ -40,16 +40,16 @@ D 级： 存在重要事实错误。
 
 | 序号  | 系列  | 标题  | 评级  | 视频链接 | B站  | 排版备注 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1   | 从零教你懂政治 | 神左兔三分体系介绍 | S   | [Youtube](https://youtu. be/-C8RjgPCM4w) |     |     |
-| 2   | 从零教你懂政治 | 神左兔细分类别及代表人物 | S   | [Youtube](https://youtu. be/DErm2KxZ9dk?si=FsrS4l05xER08UNm) |     |     |
-| 3   | 从零教你懂政治 | 左派右派是什么意思？ | S   | [Youtube](https://www. youtube. com/watch?v=TMm1Qygu7Ds&t=1s) | [Bilibili](https://www. bilibili. com/video/BV1Fj411y771) |     |
-| 4   | 介绍国内派别 | 入关学全解 | S   | [Youtube](https://www. youtube. com/watch?v=mxPimpDiNEc) | [B站小删](https://www. bilibili. com/video/BV1sh4y1z7uv) |     |
-| 5   |     | 忠臣反贼程度详解 | S   | [Youtube](https://www. youtube. com/watch?v=VKwwv5hyxkI) |     |     |
-| 6   | 键政人物志 | 马前卒 | S   | [Youtube](https://www. youtube. com/watch?v=a2BPJxeTcPg&t=64s) | [B站小删](https://www. bilibili. com/video/BV14W4y1F7p7) |     |
-| 7   | 键政人物志 | 马前卒西西河文章 | A   | [Youtube](https://www. youtube. com/watch?v=44pOiR6AkDI) |     | 推荐  |
-| 8   | 键政人物志 | 姜文  | S   | [Youtube](https://youtu. be/7Z7CNQY4XEQ) |     |     |
-| 9   | 进步保守之争 | 避孕套 | S   | [Youtube](https://www. youtube. com/watch?v=i4KxuS3oXXM&t=1277s) | [Bilibili](https://www. bilibili. com/video/BV1Ki421i7m3) |     |
-| 10  | 键政狂想 | 中国的“民主党”与“共和党” | S   | [Youtube](https://www. youtube. com/watch?v=_drjQahoZPc&t=1008s) |     |     |
+| 1   | 从零教你懂政治 | 神左兔三分体系介绍 | S   | [Youtube](https://youtu.be/-C8RjgPCM4w) |     |     |
+| 2   | 从零教你懂政治 | 神左兔细分类别及代表人物 | S   | [Youtube](https://youtu.be/DErm2KxZ9dk?si=FsrS4l05xER08UNm) |     |     |
+| 3   | 从零教你懂政治 | 左派右派是什么意思？ | S   | [Youtube](https://www.youtube.com/watch?v=TMm1Qygu7Ds&t=1s) | [Bilibili](https://www.bilibili.com/video/BV1Fj411y771) |     |
+| 4   | 介绍国内派别 | 入关学全解 | S   | [Youtube](https://www.youtube.com/watch?v=mxPimpDiNEc) | [B站小删](https://www.bilibili.com/video/BV1sh4y1z7uv) |     |
+| 5   |     | 忠臣反贼程度详解 | S   | [Youtube](https://www.youtube.com/watch?v=VKwwv5hyxkI) |     |     |
+| 6   | 键政人物志 | 马前卒 | S   | [Youtube](https://www.youtube.com/watch?v=a2BPJxeTcPg&t=64s) | [B站小删](https://www.bilibili.com/video/BV14W4y1F7p7) |     |
+| 7   | 键政人物志 | 马前卒西西河文章 | A   | [Youtube](https://www.youtube.com/watch?v=44pOiR6AkDI) |     | 推荐  |
+| 8   | 键政人物志 | 姜文  | S   | [Youtube](https://youtu.be/7Z7CNQY4XEQ) |     |     |
+| 9   | 进步保守之争 | 避孕套 | S   | [Youtube](https://www.youtube.com/watch?v=i4KxuS3oXXM&t=1277s) | [Bilibili](https://www.bilibili.com/video/BV1Ki421i7m3) |     |
+| 10  | 键政狂想 | 中国的“民主党”与“共和党” | S   | [Youtube](https://www.youtube.com/watch?v=_drjQahoZPc&t=1008s) |     |     |
 | 11  | 塔学  | 什么情况会被封 | S   | [Youtube](https://www.<br/>youtube.<br/>com/watch？v=x_6HgWxWYl0&t=1025s) |     |     |
 | 12  | 塔学  | 再谈审核与封禁机制 | S   | [Youtube](https://www.youtube.com/watch?v=3o2XknLF2pM&t=460s) |     |     |
 | 13  |     | 详解原神四国政体（补档） | S   |     | [Bilibili](https://www.bilibili.com/video/BV1e8411U71e) |     |
