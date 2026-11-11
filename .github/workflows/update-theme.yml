@@ -1,5 +1,5 @@
 
-name: Update LoveIt Theme
+name: Update Hugo Theme
 
 on:
   workflow_dispatch:
@@ -21,7 +21,7 @@ jobs:
       - name: Update LoveIt submodule
         run: |
           git submodule sync --recursive
-          git submodule update --init --remote themes/LoveIt
+          git submodule update --init --remote themes/FixIt
 
       - name: Commit and push update
         run: |
@@ -31,7 +31,7 @@ jobs:
           git add themes/LoveIt
 
           if git diff --cached --quiet; then
-            echo "LoveIt is already up to date."
+            echo "Theme is already up to date."
           else
             git commit -m "Update LoveIt theme"
             git push origin HEAD:main
