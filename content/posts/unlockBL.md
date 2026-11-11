@@ -25,7 +25,7 @@ SN-NUMBER为八位数，可以查看平板背面或者开启adb通过`adb device
 ## 刷机
 我用的镜像是[ZUI_12.6.133](https://mirrors-obs-1.lolinet.com/firmware/lenowow/2020/Tab_P11_Pro/TB-J706F/TB-J706F_CN_WIFI_USER_Q00010.0_R_ZUI_12.6.133_ST_210813_qpst.zip)
 刷机工具我用的是官方提供的联想[平板自助刷机工具](https://iknow.lenovo.com.cn/detail/424556)
-这工具会偷偷在C盘生成一个工具，并在你关闭它后偷偷删除。
+这工具会偷偷在C盘生成一个工具，并在你关闭它后偷偷删除。.
 我只好在它偷偷生成的时候复制里面的命令行工具，并替换里面的刷机镜像image，不然它只会刷最新版的ZUI（也不是不行，不过我没试过新版是否也可以正常解锁BL，毕竟我已经解锁了）
 
 如何想刷镜像库里的国际版需要改区域码，不然刷完后会跳出一个警告，却进不了系统..可以参考[这篇文章](https://www.bilibili.com/opus/717652433632755731)。
