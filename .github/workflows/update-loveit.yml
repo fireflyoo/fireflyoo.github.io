@@ -1,0 +1,38 @@
+
+name: Update LoveIt Theme
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-theme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Update LoveIt submodule
+        run: |
+          git submodule sync --recursive
+          git submodule update --init --remote themes/LoveIt
+
+      - name: Commit and push update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add themes/LoveIt
+
+          if git diff --cached --quiet; then
+            echo "LoveIt is already up to date."
+          else
+            git commit -m "Update LoveIt theme"
+            git push origin HEAD:main
+          fi
