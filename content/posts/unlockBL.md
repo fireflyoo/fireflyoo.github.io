@@ -4,6 +4,7 @@ date: 2026-01-22
 author: fireflyoo
 ---
 参考：https://wiki.postmarketos.org/wiki/Unlocking_Bootloaders/Lenovo_ZUI
+
 ## 解锁BL
 
 联想ZUI官网申请完unlockBL后，并不会发邮件给你解锁文件sn.img..
